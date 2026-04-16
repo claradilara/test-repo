@@ -1,0 +1,29 @@
+---
+title: "TV Show Analysis"
+author: "Dilara"
+format: html
+---
+
+# Overview
+
+*Suits* is a legal drama TV series that premiered in 2011.
+
+# Image
+
+![Suits Logo](https://upload.wikimedia.org/wikipedia/en/7/79/Suits_USA_Network_series_logo.png)
+
+# Data
+
+```{r}
+viewership <- c(4.6, 4.2, 3.5, 3.0, 2.5)
+season <- 1:5
+
+plot(season, viewership, type="b",
+     main="Viewership over Seasons",
+     xlab="Season", ylab="Millions")
+
+
+change <- diff(viewership)
+plot(change, type="b",
+     main="Change in Viewership",
+     ylab="Difference")
